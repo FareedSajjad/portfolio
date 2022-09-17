@@ -1,0 +1,111 @@
+#nav_bar {
+
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px 0 rgba(5,5,5,0.15);
+    z-index: 9999;
+    background-color: #F9F9FF;
+
+    .nav-item {
+        padding: 0 $mr-custom-nav 0 0;
+
+        @include mobile {
+            padding-right: 0;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            position: relative;
+            color: inherit;
+            padding: 0;
+            padding-bottom: 0.4rem;
+
+            @include mobile {
+                text-align: center;
+                margin-top: 1.8rem;
+                font-size: 1.2rem;
+            }
+        }
+
+        .nav-link.active {
+            color: $theme-color;
+        }
+
+        .nav-link.active::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 2px;
+            background-color: $theme-color;
+            bottom: 0;
+            left: 0;
+    
+            @include mobile {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        .nav-link::after {
+            content: "";
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: $theme-color;
+            transition: 0.3s all ease;
+        }
+
+        .nav-link:hover::after {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 2px;
+            background-color: $theme-color;
+            bottom: 0;
+            left: 0;
+    
+            @include mobile {
+                width: 0;
+                height: 0;
+            }
+    
+        }
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #F9F9FF;
+        opacity: 0.97;
+        z-index: 9999;
+        box-shadow: 0 2px 10px 0 rgba(5,5,5,0.15);
+        padding: 1.1rem 1rem;
+        animation: navFadeIn 0.5s;
+
+        @include mobile {
+            padding: 1.4rem 1rem; 
+        }
+      }
+
+    @keyframes navFadeIn {
+        0% {
+            opacity:0;
+        }
+        100% {
+            opacity:0.97;
+        }
+    }
+
+      .navbar-toggler {
+          border: 0;
+
+          i {
+              font-size: 2rem;
+              color: $theme-color;
+          }
+      }
+
+}

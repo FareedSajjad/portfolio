@@ -1,0 +1,31 @@
+#footer {
+    p {
+        margin-bottom: 0;
+    }
+
+    .social_links {
+
+        ul {
+            margin: 0;
+            padding-left: 0;
+            
+            @include mobile {
+                margin-top: 0.85rem;
+            }
+
+            li {
+                list-style-type: none;
+                margin-right: 0.8rem;
+
+                a {
+                    font-size: 1.5rem;
+                }
+            }
+
+            li:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+}

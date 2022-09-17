@@ -1,0 +1,32 @@
+#stats {
+    background-color: #F9F9FF;
+
+    .stat-item {
+        span {
+            i {
+                color: lighten($color: $theme-color, $amount: 30);
+            }
+        }
+
+        @include mobile {
+            margin-bottom: 1.5rem;
+            flex-direction: column;
+            text-align: center;
+
+            span {
+                margin-right: 0 !important;
+            }
+        }
+
+        .number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #353353;
+
+            em {
+                font-style: normal;
+            }
+        }
+    }
+
+}

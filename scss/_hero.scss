@@ -1,0 +1,195 @@
+#header {
+
+    display: flex;
+    min-height: calc(100vh - 83px);
+    align-items: center;
+    position: relative;
+
+    .parallax {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -99;
+
+        @include small-mobile {
+            display: none;
+        }
+
+        .layer {
+            position: absolute;
+        }
+
+        .p1 {
+            left: 10%;
+            top: 10%;
+        }
+
+        .p2 {
+            left: 25%;
+            top: 30%;
+            
+            @include mobile {
+                top: 21%;
+            }
+        }
+
+        .p3 {
+            left: 15%;
+            bottom: 30%;
+        }
+
+        .p4 {
+            left: 10%;
+            bottom: 10%;
+        }
+
+        .p5 {
+            left: 45%;
+            top: 10%;
+        }
+
+        .p6 {
+            left: 40%;
+            bottom: 10%;
+        }
+
+        .p7 {
+            top: 20%;
+            right: 30%;
+        }
+
+        .p8 {
+            right: 30%;
+            bottom: 20%;
+        }
+
+        .p9 {
+            right: 10%;
+            top: 10%;
+        }
+
+        .p10 {
+            top: 45%;
+            right: 20%;
+        }
+
+        .p11 {
+            bottom: 10%;
+            right: 10%;
+        }
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .hero_heading_hello {
+        font-weight: 600;
+        font-size: 2.5rem;
+
+        @include mobile {
+            font-size: 1.9rem;
+        }
+    }
+
+    .hero_heading_name {
+        font-weight: 600;
+        font-size: 3.7rem;
+
+        @include mobile {
+            font-size: 2.8rem;
+        }
+    }
+
+    .hero_heading_title {
+        font-weight: 600;
+        font-size: 3.7rem;
+
+        .typed-cursor {
+            font-size: 2rem;
+        }
+
+        @include mobile {
+            font-size: 2.8rem;
+        }
+    }
+
+    .little_about_me {
+        ul {
+            li {
+                margin-right: 1.2rem;
+                a {
+                    color: #353353;
+
+                    i {
+                        font-size: 1.7rem;
+                        transition: 0.2s all ease;
+                    }
+
+                    i.fa-facebook-square {
+                        color: #3C5A99;
+                        &:hover {
+                            color: darken($color: #3C5A99, $amount: 10);
+                        }
+                    }
+
+                    i.fa-github-square {
+                        color: #353353;
+                        &:hover {
+                            color: darken($color: #353353, $amount: 10);
+                        }
+                    }
+
+                    i.fa-linkedin {
+                        color: #0077B5;
+                        &:hover {
+                            color: darken($color: #0077B5, $amount: 10);
+                        }
+                    }
+
+                    i.fa-twitter-square {
+                        color: #1DA1F2;
+                        &:hover {
+                            color: darken($color: #1DA1F2, $amount: 10);
+                        }
+                    }
+                }
+            }
+            li:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include mobile {
+        .call_to_action {
+            a {
+                margin-right: 1rem;
+            }
+            a.last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include small-mobile {
+        .call_to_action {
+            a {
+                margin-right: 0;
+                display: block;
+                margin-bottom: 1rem;
+            }
+            a.last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}
